@@ -1,4 +1,4 @@
-package com.codeforany.multi_food_restaurants
+package com.example.foodapp
 
 import io.flutter.embedding.android.FlutterActivity
 

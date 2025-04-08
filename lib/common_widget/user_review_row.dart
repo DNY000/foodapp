@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:multi_food_restaurants/common/color_extension.dart';
+import 'package:foodapp/common/color_extension.dart';
 import 'package:readmore/readmore.dart';
 
 import 'img_button.dart';
@@ -11,7 +11,12 @@ class UserReviewRow extends StatelessWidget {
   final VoidCallback? onLikePress;
   final VoidCallback? onSharePress;
 
-  const UserReviewRow({super.key, this.isBottomActionBar = false, this.onSharePress, this.onLikePress, this.onCommentPress});
+  const UserReviewRow(
+      {super.key,
+      this.isBottomActionBar = false,
+      this.onSharePress,
+      this.onLikePress,
+      this.onCommentPress});
 
   @override
   Widget build(BuildContext context) {
@@ -44,31 +49,9 @@ class UserReviewRow extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.w700),
                     ),
-                    Text(
-                      "45 Reviews, 210 Followers",
-                      style: TextStyle(
-                          color: TColor.gray,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700),
-                    ),
                   ],
                 ),
               ),
-              Container(
-                height: 30,
-                padding:
-                    const EdgeInsets.symmetric(vertical: 4, horizontal: 15),
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1, color: TColor.primary),
-                    borderRadius: BorderRadius.circular(15)),
-                child: Text(
-                  "Follow",
-                  style: TextStyle(
-                      color: TColor.primary,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700),
-                ),
-              )
             ],
           ),
           const SizedBox(
@@ -164,12 +147,11 @@ class UserReviewRow extends StatelessWidget {
               ],
             ),
           ),
-         
           Row(
             children: [
               IconButton(
                 onPressed: () {
-                  if(onLikePress != null) {
+                  if (onLikePress != null) {
                     onLikePress!();
                   }
                 },
@@ -182,7 +164,7 @@ class UserReviewRow extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                   if (onCommentPress != null) {
+                  if (onCommentPress != null) {
                     onCommentPress!();
                   }
                 },
@@ -195,7 +177,7 @@ class UserReviewRow extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                   if (onSharePress != null) {
+                  if (onSharePress != null) {
                     onSharePress!();
                   }
                 },

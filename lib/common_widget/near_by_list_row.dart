@@ -9,9 +9,9 @@ class NearByListRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    // var media = MediaQuery.of(context).size;
 
-    var rateVal = double.tryParse( fObj["rate"].toString()) ?? 0.0;
+    var rateVal = double.tryParse(fObj["rate"].toString()) ?? 0.0;
 
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
@@ -53,8 +53,6 @@ class NearByListRow extends StatelessWidget {
                           fontWeight: FontWeight.w700),
                     ),
                     Container(
-                     
-                       
                       padding: const EdgeInsets.symmetric(
                           vertical: 2, horizontal: 8),
                       decoration: BoxDecoration(
@@ -65,7 +63,7 @@ class NearByListRow extends StatelessWidget {
                         fObj["rate"].toString(),
                         textAlign: TextAlign.left,
                         style: const TextStyle(
-                            color:  Colors.white,
+                            color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w700),
                       ),
@@ -102,10 +100,11 @@ class NearByListRow extends StatelessWidget {
                           fontSize: 12,
                           fontWeight: FontWeight.w700),
                     ),
-
-                    if(isBookmark) 
-                       Image.asset("assets/img/bookmark_fill.png", width: 15, ),
-                      
+                    if (isBookmark)
+                      Image.asset(
+                        "assets/img/bookmark_fill.png",
+                        width: 15,
+                      ),
                   ],
                 ),
               ],

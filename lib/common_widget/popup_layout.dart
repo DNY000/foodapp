@@ -35,15 +35,12 @@ class PopupLayout extends ModalRoute {
   }
 
   @override
-  // TODO: implement maintainState
   bool get maintainState => false;
 
   @override
-  // TODO: implement opaque
   bool get opaque => false;
 
   @override
-  // TODO: implement transitionDuration
   Duration get transitionDuration => const Duration(milliseconds: 100);
 
   PopupLayout({Key? key, this.bgColor, required this.child, this.margin});
@@ -51,7 +48,6 @@ class PopupLayout extends ModalRoute {
   @override
   Widget buildTransitions(BuildContext context, Animation<double> animation,
       Animation<double> secondaryAnimation, Widget child) {
-    // TODO: implement buildTransitions
     return FadeTransition(
       opacity: animation,
       child: ScaleTransition(

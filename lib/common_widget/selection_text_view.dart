@@ -7,7 +7,10 @@ class SelectionTextView extends StatelessWidget {
   final String actionTitle;
   final VoidCallback onSeeAllTap;
   const SelectionTextView(
-      {super.key, required this.title, required this.onSeeAllTap, this.actionTitle = "See all"});
+      {super.key,
+      required this.title,
+      required this.onSeeAllTap,
+      this.actionTitle = "See all"});
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +33,8 @@ class SelectionTextView extends StatelessWidget {
               child: Text(
                 actionTitle,
                 textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: TColor.primary,
+                style: const TextStyle(
+                    color: Colors.orange,
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
               ),

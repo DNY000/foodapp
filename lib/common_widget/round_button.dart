@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:multi_food_restaurants/common/color_extension.dart';
 
 enum RoundButtonType { white, primary }
 
@@ -21,9 +20,8 @@ class RoundButton extends StatelessWidget {
         onPressed: onPressed,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         minWidth: double.maxFinite,
-        color:
-            type == RoundButtonType.white ? Colors.white : TColor.primary,
-        textColor: type == RoundButtonType.white ? TColor.primary : Colors.white ,
+        color: type == RoundButtonType.white ? Colors.white : Colors.orange,
+        textColor: type == RoundButtonType.white ? Colors.orange : Colors.white,
         height: 55,
         child: Text(
           title,

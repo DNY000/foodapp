@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:multi_food_restaurants/common/color_extension.dart';
+import 'package:foodapp/common/color_extension.dart';
 
 class UserPhotoRow extends StatelessWidget {
   final Map pObj;
@@ -34,9 +34,9 @@ class UserPhotoRow extends StatelessWidget {
                     height: 50,
                   ),
                 ),
-
-                const SizedBox(width: 15,),
-               
+                const SizedBox(
+                  width: 15,
+                ),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,8 +58,6 @@ class UserPhotoRow extends StatelessWidget {
                     ],
                   ),
                 ),
-               
-               
                 Container(
                   height: 30,
                   padding:
@@ -81,17 +79,14 @@ class UserPhotoRow extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-
-           ClipRect(
-                child: Image.asset(
-                  pObj["image"].toString(),
-                  width: media.width,
-                  height: media.width,
-                  fit: BoxFit.cover,
-                ),
-              ),
-             
-
+          ClipRect(
+            child: Image.asset(
+              pObj["image"].toString(),
+              width: media.width,
+              height: media.width,
+              fit: BoxFit.cover,
+            ),
+          ),
           Row(
             children: [
               IconButton(

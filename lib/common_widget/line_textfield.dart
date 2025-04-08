@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:multi_food_restaurants/common/color_extension.dart';
+import 'package:foodapp/common/color_extension.dart';
 
 class LineTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -15,7 +15,8 @@ class LineTextField extends StatelessWidget {
       this.obscureText = false,
       this.keyboardType,
       this.isClear = false,
-      this.onClearPressed});
+      this.onClearPressed,
+      required String? Function(String? value) validator});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +74,9 @@ class RoundTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      decoration: BoxDecoration(color: TColor.gray.withOpacity(0.2), borderRadius: BorderRadius.circular(15) ),
+      decoration: BoxDecoration(
+          color: TColor.gray.withOpacity(0.15),
+          borderRadius: BorderRadius.circular(15)),
       child: TextField(
         controller: controller,
         keyboardType: keyboardType,
@@ -81,7 +84,8 @@ class RoundTextField extends StatelessWidget {
         style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
         decoration: InputDecoration(
             hintText: hitText,
-            contentPadding: const EdgeInsets.symmetric(vertical: 4 , horizontal: 8),
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
             prefixIcon: leftIcon,
